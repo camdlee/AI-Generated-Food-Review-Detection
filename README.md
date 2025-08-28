@@ -3,7 +3,7 @@
 ## Project Overview
 This project implements a machine learning pipeline to detect whether food reviews (paired with images) are AI-generated or authentic using supervised learning techniques. The system leverages both textual features from review content and visual features from accompanying images to create a robust multimodal classification approach.
 ![Image Example 1](images/0.jpg)
-![Image Example 50](images/50.jpg)
+![Image Example 2](images/1.jpg)
 
 - Goal: Build and evaluate models that can classify reviews (paired with images) as either authentic or AI-generated
 - Data:
