@@ -2,6 +2,9 @@
 
 ## Project Overview
 This project implements a machine learning pipeline to detect whether food reviews (paired with images) are AI-generated or authentic using supervised learning techniques. The system leverages both textual features from review content and visual features from accompanying images to create a robust multimodal classification approach.
+![Image Example 1](images/0.jpg)
+![Image Example 50](images/50.jpg)
+
 - Goal: Build and evaluate models that can classify reviews (paired with images) as either authentic or AI-generated
 - Data:
   - Training set: 12,086 rows
@@ -9,7 +12,7 @@ This project implements a machine learning pipeline to detect whether food revie
   - Validation set: 4,028 rows
   - Each dataset contains 25 features and is balanced (~50% authentic, ~50% AI-generated)
 
-# Technologies Used
+## Technologies Used
 - Python (NumPy, Pandas, Matplotlib, Scikit-learn, seaborn)
 - Jupyter Notebook for development and visualization
 
@@ -40,7 +43,10 @@ This project implements a machine learning pipeline to detect whether food revie
   
 ## Key Findings
 - AdaBoost Decision Tree achieved the highest performance (98.91% accuracy) by learning from previous learners' mistakes and effectively capturing nuanced differences between authentic and AI-generated content
+  ![Adaboost Comparison](adaboost_dt_comparison.jpg) 
 - Random Forest performed well (97.29% accuracy) with good generalization due to ensemble averaging, but lacked the sequential error correction of boosting methods
-- SVM showed the lowest performance (81.15% accuracy), likely due to the non-linear relationship between textual and image features that couldn't be effectively captured by hyperplane separation 
+  ![Random Forest Comparison](random_forest_comparison.jpg)
+- SVM showed the lowest performance (81.15% accuracy), likely due to the non-linear relationship between textual and image features that couldn't be effectively captured by hyperplane separation
+  ![SVM Comparison](svm_comparison.jpg)
 - Minimal difference between stratified and unstratified cross-validation (within 0.4%) due to balanced dataset (approximately 50% authentic, 50% AI-generated)
 - Dataset balance makes accuracy the most suitable evaluation metric
